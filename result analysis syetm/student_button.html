@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance</title>
+</head>
+<body>
+
+<h2>Check Scholarship Message</h2>
+
+<textarea id="inputText" placeholder="Enter scholarship message"></textarea>
+<br><br>
+
+<button onclick="checkText()">Analyze</button>
+
+<p id="result"></p>
+
+<script>
+async function checkText() {
+    const text = document.getElementById("inputText").value;
+
+    const response = await fetch("http://127.0.0.1:5000/predict", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ text: text })
+    });
+
+    const data = await response.json();
+
+    document.getElementById("result").innerText =
+        data.prediction === 1 ? "Fake Scholarship ⚠️" : "Real Scholarship ✅";
+}
+</script>
+
+</body>
+</html>

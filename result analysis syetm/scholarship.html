@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scholarship Detection | College Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer type="module"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo-section">
+        <a href="index.html">
+          <img src="image/svp_logo.png" alt="College Logo" class="college-logo">
+        </a>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="student.html" class="btnave">Student</a>
+        <a href="teacher.html" class="btnave">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Scholarship Detection Section -->
+  <section id="ai-checker" class="section">
+    <div class="container">
+      <h2>🎯 AI Scholarship Detection</h2>
+      <p>Check whether a scholarship message is real or fake using our Hybrid URL + AI detection system.</p>
+
+      <div class="checker-box">
+        <textarea id="inputText" placeholder="Paste the scholarship text, email, or URL message here..." style="width: 100%; min-height: 150px; padding: 15px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px; margin-bottom: 15px; resize: vertical;"></textarea>
+        
+        <button onclick="checkScholarshipHybrid()" id="checkBtn" class="btn" style="width: 100%; font-size: 18px; position: relative;">
+          <span id="btnText">🔍 Check Scholarship</span>
+          <i id="loadingSpinner" class="fas fa-spinner fa-spin" style="display: none; margin-left: 10px;"></i>
+        </button>
+
+        <p id="result" class="result-text" style="font-weight: bold; margin-top: 20px; font-size: 18px;"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" style="position: fixed; bottom: 0; width: 100%;">
+    <div class="container footer-container">
+      <p>&copy;Copyright © 2025 , St. Vincent Pallotti College of Engineering & Technology.</p>
+    </div>
+  </footer>
+</body>
+</html>
